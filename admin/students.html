@@ -174,9 +174,9 @@
                                             <td>juan.delacruz@student.msu.edu</td>
                                             <td><span class="badge bg-success">Enrolled</span></td>
                                             <td class="action-buttons">
-                                                <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#studentsEditModal"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewStudents1Modal"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteStudentModal"><i class="fas fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -190,9 +190,9 @@
                                             <td>maria.santos@student.msu.edu</td>
                                             <td><span class="badge bg-success">Enrolled</span></td>
                                             <td class="action-buttons">
-                                                <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#studentsEditModal"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewStudents2Modal"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteStudentModal"><i class="fas fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -206,9 +206,9 @@
                                             <td>pedro.reyes@student.msu.edu</td>
                                             <td><span class="badge bg-warning text-dark">Pending</span></td>
                                             <td class="action-buttons">
-                                                <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#studentsEditModal"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewStudents3Modal"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="deleteStudentModal"><i class="fas fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -222,9 +222,9 @@
                                             <td>ana.gonzales@student.msu.edu</td>
                                             <td><span class="badge bg-success">Enrolled</span></td>
                                             <td class="action-buttons">
-                                                <button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
-                                                <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#studentsEditModal"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewStudents4Modal"><i class="fas fa-eye"></i></button>
+                                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteStudentModal"><i class="fas fa-trash"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -247,6 +247,185 @@
                 </footer>
             </div>
         </div>
+
+        <!-- MODAL FOR DELETING STUDENT -->
+         <div class="modal fade" id="deleteStudentModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="deleteModalLabel">Confirm DELETE</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete this user?
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <a href="../index.html" class="btn btn-danger">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW MODAL FOR STUDENTS -->
+        <div class="modal fade" id="viewStudents1Modal" tabindex="-1" aria-labelledby="viewStudentsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="viewStudentsModalLabel">Students Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
+                            </div>
+                            <div class="col-md-8">
+                                <h2>Students</h2>
+                                <p><strong>Student ID:</strong> 2025-001</p>
+                                <p><strong>Name:</strong> Juan Dela Cruz</p>
+                                <p><strong>Course:</strong> BS Computer Science</p>
+                                <p><strong>Year Level:</strong> 3rd Year</p>
+                                <p><strong>Contact:</strong> juan.delacruz@student.msu.edu</p>
+                                <p><strong>Status:</strong> Enrolled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="viewStudents2Modal" tabindex="-1" aria-labelledby="viewStudentsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="viewStudentsModalLabel">Students Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
+                            </div>
+                            <div class="col-md-8">
+                                <h2>Students</h2>
+                                <p><strong>Student ID:</strong> 2025-002</p>
+                                <p><strong>Name:</strong> Maria Santos</p>
+                                <p><strong>Course:</strong> BS Information Technology</p>
+                                <p><strong>Year Level:</strong> 2nd Year</p>
+                                <p><strong>Contact:</strong> maria.santos@student.msu.edu</p>
+                                <p><strong>Status:</strong> Enrolled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="viewStudents3Modal" tabindex="-1" aria-labelledby="viewStudentsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="viewStudentsModalLabel">Students Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
+                            </div>
+                            <div class="col-md-8">
+                                <h2>Students</h2>
+                                <p><strong>Student ID:</strong> 2025-003</p>
+                                <p><strong>Name:</strong> Pedro Reyes</p>
+                                <p><strong>Course:</strong> BS Computer Science</p>
+                                <p><strong>Year Level:</strong> 2nd Year</p>
+                                <p><strong>Contact:</strong> pedro.reyes@student.msu.edu</p>
+                                <p><strong>Status:</strong> <span class="badge bg-warning text-dark">Pending</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="viewStudents4Modal" tabindex="-1" aria-labelledby="viewStudentsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="viewStudentsModalLabel">Students Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
+                            </div>
+                            <div class="col-md-8">
+                                <h2>Students</h2>
+                                <p><strong>Student ID:</strong> 2025-0004</p>
+                                <p><strong>Name:</strong> Ana Gonzales</p>
+                                <p><strong>Course:</strong> BS Information Technology</p>
+                                <p><strong>Year Level:</strong> 1st Year</p>
+                                <p><strong>Contact:</strong> ana.gonzales@student.msu.edu</p>
+                                <p><strong>Status:</strong> Enrolled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- EDIT MODAL FOR STUDENTS-->
+        <div class="modal fade" id="studentsEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="facultyModalLabel">Edit Students Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editStudentsForm">
+                            <div class="mb-3">
+                                <label for="studentID" class="form-label">ID</label>
+                                <input type="text" class="form-control" id="studentID"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="studentName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="studentName" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="studentDepartment" class="form-label">Department</label>
+                                <input type="text" class="form-control" id="studentDepartment" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="studentYearLevel" class="form-label">Year Level</label>
+                                <input type="text" class="form-control" id="studentYearLevel" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="studentContact" class="form-label">Contact </label>
+                                <input type="text" class="form-control" id="studentContact" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Status</label>
+                                <select class="form-select" id="editStatus">
+                                    <option value="active">Active</option>
+                                    <option value="Pending">Pending</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="../js/scripts.js"></script>
         <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
