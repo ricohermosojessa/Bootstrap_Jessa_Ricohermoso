@@ -253,6 +253,7 @@
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary text-white">
+                    <div class="modal-header bg-danger text-white">
                         <h5 class="modal-title" id="deleteModalLabel">Confirm DELETE</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -282,13 +283,12 @@
                                 <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
                             </div>
                             <div class="col-md-8">
-                                <h2>Students</h2>
                                 <p><strong>Student ID:</strong> 2025-001</p>
                                 <p><strong>Name:</strong> Juan Dela Cruz</p>
                                 <p><strong>Course:</strong> BS Computer Science</p>
                                 <p><strong>Year Level:</strong> 3rd Year</p>
                                 <p><strong>Contact:</strong> juan.delacruz@student.msu.edu</p>
-                                <p><strong>Status:</strong> Enrolled</p>
+                                <p><strong>Status:</strong> <span class="badge bg-success">Enrolled</span></p>
                             </div>
                         </div>
                     </div>
@@ -309,13 +309,12 @@
                                 <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
                             </div>
                             <div class="col-md-8">
-                                <h2>Students</h2>
                                 <p><strong>Student ID:</strong> 2025-002</p>
                                 <p><strong>Name:</strong> Maria Santos</p>
                                 <p><strong>Course:</strong> BS Information Technology</p>
                                 <p><strong>Year Level:</strong> 2nd Year</p>
                                 <p><strong>Contact:</strong> maria.santos@student.msu.edu</p>
-                                <p><strong>Status:</strong> Enrolled</p>
+                                <p><strong>Status:</strong> <span class="badge bg-success">Enrolled</span></p>
                             </div>
                         </div>
                     </div>
@@ -336,11 +335,10 @@
                                 <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
                             </div>
                             <div class="col-md-8">
-                                <h2>Students</h2>
                                 <p><strong>Student ID:</strong> 2025-003</p>
                                 <p><strong>Name:</strong> Pedro Reyes</p>
                                 <p><strong>Course:</strong> BS Computer Science</p>
-                                <p><strong>Year Level:</strong> 2nd Year</p>
+                                <p><strong>Year Level:</strong> 4th Year</p>
                                 <p><strong>Contact:</strong> pedro.reyes@student.msu.edu</p>
                                 <p><strong>Status:</strong> <span class="badge bg-warning text-dark">Pending</span></p>
                             </div>
@@ -363,13 +361,12 @@
                                 <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Faculty Photo" class="img-fluid rounded-circle mb-2" />
                             </div>
                             <div class="col-md-8">
-                                <h2>Students</h2>
                                 <p><strong>Student ID:</strong> 2025-0004</p>
                                 <p><strong>Name:</strong> Ana Gonzales</p>
                                 <p><strong>Course:</strong> BS Information Technology</p>
                                 <p><strong>Year Level:</strong> 1st Year</p>
                                 <p><strong>Contact:</strong> ana.gonzales@student.msu.edu</p>
-                                <p><strong>Status:</strong> Enrolled</p>
+                                <p><strong>Status:</strong> <span class="badge bg-success">Enrolled</span></p>
                             </div>
                         </div>
                     </div>
@@ -382,7 +379,9 @@
         <div class="modal fade" id="studentsEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
+
+                    <div class="modal-header btn btn-primary text-white">
+
                         <h5 class="modal-title" id="facultyModalLabel">Edit Students Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
