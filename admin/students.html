@@ -7,10 +7,10 @@
         <meta name="description" content="MarSU Students Management" />
         <meta name="author" content="Marinduque State University" />
         <title>Students - MarSu Admin</title>
-        <link href="../css/style.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="../css/bootstrap-icons.css">
-        <script src="../js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <style>
             :root {
                 --apple-green: #4CAF50;
@@ -252,7 +252,6 @@
          <div class="modal fade" id="deleteStudentModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
                     <div class="modal-header bg-danger text-white">
                         <h5 class="modal-title" id="deleteModalLabel">Confirm DELETE</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -379,9 +378,7 @@
         <div class="modal fade" id="studentsEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
-
                     <div class="modal-header btn btn-primary text-white">
-
                         <h5 class="modal-title" id="facultyModalLabel">Edit Students Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -423,14 +420,12 @@
                 </div>
             </div>
         </div>
-
-
-        <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="../js/scripts.js"></script>
-        <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script>
             window.addEventListener('DOMContentLoaded', event => {
-                const datatablesSimple = document.getElementById('studentsTable');
+                const datatablesSimple = document.getElementById('coursesTable');
                 if (datatablesSimple) {
                     new simpleDatatables.DataTable(datatablesSimple);
                 }
