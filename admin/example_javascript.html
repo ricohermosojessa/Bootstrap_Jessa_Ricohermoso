@@ -263,21 +263,21 @@
                         </div>
 
 
-                        <!--RADIO GROUP--><br>
+                        <!--CHECKBOXRADIO--><br>
                         <div class="widget">
-
-                            <h3>Checkboxradio</h3>
-                            <h4>Radio Group</h4>
+ 
+                            <h2>Radio Group</h2>
                             <fieldset>
-                                <legend>Select a Location: </legend>
-                                <label for="radio-1">New York</label>
+                            <h2>Select a Location: </h2>
                                 <input type="radio" name="radio-1" id="radio-1">
-                                <label for="radio-2">Paris</label>
+                                <label for="radio-1">New York</label>
                                 <input type="radio" name="radio-1" id="radio-2">
-                                <label for="radio-3">London</label>
+                                <label for="radio-2">Paris</label>
                                 <input type="radio" name="radio-1" id="radio-3">
+                                <label for="radio-3">London</label>
                             </fieldset>
                         </div>
+ 
 
                         <!--DATEPICKER--><br>
                         <h3>Datepicker</h3>
@@ -307,9 +307,9 @@
                             <div class="progress-label">Starting download...</div>
                             <div id="progressbar"></div>
                         </div>
-                        <button id="downloadButton">Start Download</button>
+                        <button id="downloadButton">Start Download</button><br>
 
-                        <!--SELECTMENU--><br>
+                        <!--SELECTMENU--><br><br>
                         <h3>Selectmenu</h3>
                         <div class="demo">
  
@@ -338,9 +338,9 @@
                             </fieldset>
                         </form>
 
-                        </div>
+                        </div><br>
 
-                        <!--SLIDER-->
+                        <!--SLIDER--><br><br>
                         <h3>Slider</h3>
                         <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
                             <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
@@ -353,8 +353,7 @@
                         
                         <div id="swatch" class="ui-widget-content ui-corner-all"></div>
 
-                        <!--SPINNER-->
-                        <div>
+                        <!--SPINNER--><br><br>
                         <h3>Spinner</h3>
                         <p>
                             <label for="spinner">Select a value:</label>
@@ -368,7 +367,6 @@
                             <button id="getvalue">Get value</button>
                             <button id="setvalue">Set value to 5</button>
                         </p>
-                        </div>
 
                         <!--TABS-->
                         <h3>Tabs</h3>
@@ -411,7 +409,8 @@
                                 </div>
                             </fieldset>
                         </form>
-
+                    </div>
+                </main>
                   
                 <!-- END OF THE CONTENT PAGE -->
 
@@ -463,12 +462,14 @@
                 alert("Hello! This is a JavaScript Alert.");
             }
         </script>
+
+
         <script>
             $( function() {
                 $( "#accordion" ).accordion({
                 heightStyle: "content"
                 });
-            } );
+            }   );
         </script>
         <script>
         $( function() {
@@ -498,32 +499,37 @@
             ];
             $( "#tags" ).autocomplete({
                 source: availableTags
-            });
+            }   );
         }   );
         </script>
+        
         <script>
         $( function() {
-          $( "input" ).checkboxradio();
-          $( "fieldset" ).controlgroup();
-        } );
+            $( "input" ).checkboxradio();
+            $( "fieldset" ).controlgroup();
+        }   );
         </script>
+
         <script>
             $( function() {
                 $( "#datepicker" ).datepicker();
-            } );
+            }   );
         </script>
+
         <script>
             $( function() {
                 $( "#dialog" ).dialog();
-            } );
+            }   );
         </script>
+
         <script>
             $( function() {
                 $( "#menu" ).menu({
                 items: "> :not(.ui-widget-header)"
                 });
-            } );
+            }   );
         </script>
+
         <script>
         $( function() {
             var progressTimer,
@@ -595,6 +601,7 @@
             }
         } );
         </script>
+
         <script>
         $( function() {
             var circle = $( "#circle" );
@@ -615,6 +622,7 @@
             });
         } );
         </script>
+
         <script>
         $( function() {
             var circle = $( "#circle" );
@@ -635,6 +643,7 @@
             });
         } );
         </script>
+
         <script>
         $( function() {
             function hexFromRGB(r, g, b) {
@@ -671,6 +680,7 @@
             $( "#blue" ).slider( "value", 60 );
         } );
         </script>
+
         <script>
         $( function() {
             var spinner = $( "#spinner" ).spinner();
@@ -699,6 +709,7 @@
             $( "button" ).button();
         } );
         </script>
+
         <script>
         $( function() {
             $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
@@ -713,17 +724,10 @@
                     at: "right+5 top-5",
                     collision: "none"
                 }
-            });
-            $( "<button>" )
-                .text( "Show help" )
-                .button()
-                .on( "click", function() {
-                    tooltips.tooltip( "open" );
-                })
-                .insertAfter( "form" );
+            } );
+            
         }   );
         </script>
-
 
     </body>
 </html>
