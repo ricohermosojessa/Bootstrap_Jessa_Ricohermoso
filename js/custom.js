@@ -1,3 +1,4 @@
+//THIS IS FOR THE SHOW ALERT FOR YES OR NO
 function showAlertYesNo() {
     let userResponse = confirm("Do you want to proceed?");
     if(userResponse) {

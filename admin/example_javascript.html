@@ -10,7 +10,14 @@
         <link href="../css/style.min.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="../css/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+
         <script src="../js/all.js" crossorigin="anonymous"></script>
+        
         <style>
             :root {
                 --apple-green: #4CAF50;
@@ -49,6 +56,62 @@
             .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
                 box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
             }
+            fieldset {
+                border: 0;
+                margin-left: 300px;
+            }
+            label {
+                display: block;
+                margin: 20px 0 0 0;
+            }
+
+            #circle {
+                float: left;
+                background: yellow;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+            }
+            #red, #green, #blue {
+                float: left;
+                clear: left;
+                width: 300px;
+                margin: 15px;
+            }
+            #swatch {
+                width: 120px;
+                height: 100px;
+                margin-top: 18px;
+                margin-left: 350px;
+                background-image: none;
+            }
+            #red .ui-slider-range { background: #ef2929; }
+            #red .ui-slider-handle { border-color: #ef2929; }
+            #green .ui-slider-range { background: #8ae234; }
+            #green .ui-slider-handle { border-color: #8ae234; }
+            #blue .ui-slider-range { background: #729fcf; }
+            #blue .ui-slider-handle { border-color: #729fcf; 
+            }
+            .ui-tabs-vertical { width: 55em; }
+            .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+            .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+            .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+            .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+            .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;
+            }
+            label {
+                display: inline-block; width: 5em;
+            }
+            fieldset div {
+                margin-bottom: 2em;
+            }
+            fieldset .help {
+                display: inline-block;
+            }
+            .ui-tooltip {
+                width: 210px;
+            }
+
         </style>
     </head>
     <body class="sb-nav-fixed">
@@ -165,8 +228,191 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </main>
+
+                        <!--ACCORDION--><br>
+                        <h3>Accordion</h3>
+                        <div id="accordion">
+                            <h3>Section 1</h3>
+                            <div>
+                                <p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                            </div>
+                            <h3>Section 2</h3>
+                            <div>
+                                <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                            </div>
+                            <h3>Section 3</h3>
+                            <div>
+                                <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                                <ul>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--AUTOCOMPLETE--><br>
+                        <h3>Autocomplete</h3>
+                        <div class="ui-widget">
+                            <label for="tags">Tags: </label>
+                            <input id="tags">
+                        </div>
+
+
+                        <!--RADIO GROUP--><br>
+                        <div class="widget">
+
+                            <h3>Checkboxradio</h3>
+                            <h4>Radio Group</h4>
+                            <fieldset>
+                                <legend>Select a Location: </legend>
+                                <label for="radio-1">New York</label>
+                                <input type="radio" name="radio-1" id="radio-1">
+                                <label for="radio-2">Paris</label>
+                                <input type="radio" name="radio-1" id="radio-2">
+                                <label for="radio-3">London</label>
+                                <input type="radio" name="radio-1" id="radio-3">
+                            </fieldset>
+                        </div>
+
+                        <!--DATEPICKER--><br>
+                        <h3>Datepicker</h3>
+                        <p>Date: <input type="text" id="datepicker"></p>
+
+                        <!--DIALOG-->
+                        <div id="dialog" title="Basic dialog">
+                            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                        </div>
+
+                        <!--MENU--><br>
+                        <h3>Menu</h3>
+                        <ul id="menu">
+                            <li class="ui-widget-header"><div>Category 1</div></li>
+                            <li><div>Option 1</div></li>
+                            <li><div>Option 2</div></li>
+                            <li><div>Option 3</div></li>
+                            <li class="ui-widget-header"><div>Category 2</div></li>
+                            <li><div>Option 4</div></li>
+                            <li><div>Option 5</div></li>
+                            <li><div>Option 6</div></li>
+                        </ul>
+
+                        <!--PROGRESSBAR--><br>
+                        <h3>Progressbar</h3>
+                        <div id="dialog" title="File Download">
+                            <div class="progress-label">Starting download...</div>
+                            <div id="progressbar"></div>
+                        </div>
+                        <button id="downloadButton">Start Download</button>
+
+                        <!--SELECTMENU--><br>
+                        <h3>Selectmenu</h3>
+                        <div class="demo">
+ 
+                        <form action="#">
+                        
+                            <div id="circle"></div>
+                            
+                            <fieldset>
+                                <label for="radius">Circle radius</label>
+                                <select name="radius" id="radius">
+                                    <option value="50">50px</option>
+                                    <option value="100">100px</option>
+                                    <option value="150" selected="selected">150px</option>
+                                    <option value="200">200px</option>
+                                    <option value="250">250px</option>
+                                </select>
+                                
+                                <label for="color">Circle color</label>
+                                <select name="color" id="color">
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="yellow" selected="selected">Yellow</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                </select>
+                            </fieldset>
+                        </form>
+
+                        </div>
+
+                        <!--SLIDER-->
+                        <h3>Slider</h3>
+                        <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+                            <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+                            Simple Colorpicker
+                        </p>
+                        
+                        <div id="red"></div>
+                        <div id="green"></div>
+                        <div id="blue"></div>
+                        
+                        <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+
+                        <!--SPINNER-->
+                        <div>
+                        <h3>Spinner</h3>
+                        <p>
+                            <label for="spinner">Select a value:</label>
+                            <input id="spinner" name="value">
+                        </p>
+                        <p>
+                            <button id="disable">Toggle disable/enable</button>
+                            <button id="destroy">Toggle widget</button>
+                        </p>
+                        <p>
+                            <button id="getvalue">Get value</button>
+                            <button id="setvalue">Set value to 5</button>
+                        </p>
+                        </div>
+
+                        <!--TABS-->
+                        <h3>Tabs</h3>
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                                <li><a href="#tabs-2">Proin dolor</a></li>
+                                <li><a href="#tabs-3">Aenean lacinia</a></li>
+                            </ul>
+                            <div id="tabs-1"><br>
+                                <h2>Content heading 1</h2>
+                                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                            </div>
+                            <div id="tabs-2"><br>
+                                <h2>Content heading 2</h2>
+                                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                            </div>
+                            <div id="tabs-3"><br>
+                                <h2>Content heading 3</h2>
+                                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                            </div>
+                        </div><br>
+
+                        <!--TOOLTIP-->
+                        <h3>Tooltip</h3>
+                        <form>
+                            <fieldset>
+                                <div>
+                                    <label for="firstname">Firstname</label>
+                                    <input id="firstname" name="firstname" title="Please provide your firstname.">
+                                </div>
+                                <div>
+                                    <label for="lastname">Lastname</label>
+                                    <input id="lastname" name="lastname" title="Please provide also your lastname.">
+                                </div>
+                                <div>
+                                    <label for="address">Address</label>
+                                    <input id="address" name="address" title="Your home or work address.">
+                                </div>
+                            </fieldset>
+                        </form>
+
+                  
                 <!-- END OF THE CONTENT PAGE -->
 
                 <footer class="py-4 bg-light mt-auto">
@@ -201,18 +447,283 @@
                 </div>
             </div>
         </div>
-
+        
+        
         <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="../js/scripts.js"></script>
         <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="../js/datatables-simple-demo.js"></script>
         <script src="../js/custom.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+        
         <script>
             function showAlert() {
                 alert("Hello! This is a JavaScript Alert.");
             }
         </script>
+        <script>
+            $( function() {
+                $( "#accordion" ).accordion({
+                heightStyle: "content"
+                });
+            } );
+        </script>
+        <script>
+        $( function() {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        }   );
+        </script>
+        <script>
+        $( function() {
+          $( "input" ).checkboxradio();
+          $( "fieldset" ).controlgroup();
+        } );
+        </script>
+        <script>
+            $( function() {
+                $( "#datepicker" ).datepicker();
+            } );
+        </script>
+        <script>
+            $( function() {
+                $( "#dialog" ).dialog();
+            } );
+        </script>
+        <script>
+            $( function() {
+                $( "#menu" ).menu({
+                items: "> :not(.ui-widget-header)"
+                });
+            } );
+        </script>
+        <script>
+        $( function() {
+            var progressTimer,
+            progressbar = $( "#progressbar" ),
+            progressLabel = $( ".progress-label" ),
+            dialogButtons = [{
+                text: "Cancel Download",
+                click: closeDownload
+            }],
+            dialog = $( "#dialog" ).dialog({
+                autoOpen: false,
+                closeOnEscape: false,
+                resizable: false,
+                buttons: dialogButtons,
+                open: function() {
+                progressTimer = setTimeout( progress, 2000 );
+                },
+                beforeClose: function() {
+                downloadButton.button( "option", {
+                    disabled: false,
+                    label: "Start Download"
+                });
+                }
+            }),
+            downloadButton = $( "#downloadButton" )
+                .button()
+                .on( "click", function() {
+                $( this ).button( "option", {
+                    disabled: true,
+                    label: "Downloading..."
+                });
+                dialog.dialog( "open" );
+                });
+        
+            progressbar.progressbar({
+            value: false,
+            change: function() {
+                progressLabel.text( "Current Progress: " + progressbar.progressbar( "value" ) + "%" );
+            },
+            complete: function() {
+                progressLabel.text( "Complete!" );
+                dialog.dialog( "option", "buttons", [{
+                text: "Close",
+                click: closeDownload
+                }]);
+                $(".ui-dialog button").last().trigger( "focus" );
+            }
+            });
+        
+            function progress() {
+            var val = progressbar.progressbar( "value" ) || 0;
+        
+            progressbar.progressbar( "value", val + Math.floor( Math.random() * 3 ) );
+        
+            if ( val <= 99 ) {
+                progressTimer = setTimeout( progress, 50 );
+            }
+            }
+        
+            function closeDownload() {
+            clearTimeout( progressTimer );
+            dialog
+                .dialog( "option", "buttons", dialogButtons )
+                .dialog( "close" );
+            progressbar.progressbar( "value", false );
+            progressLabel
+                .text( "Starting download..." );
+            downloadButton.trigger( "focus" );
+            }
+        } );
+        </script>
+        <script>
+        $( function() {
+            var circle = $( "#circle" );
+        
+            $( "#radius" ).selectmenu({
+            change: function( event, data ) {
+                circle.css({
+                    width: data.item.value,
+                    height: data.item.value
+                });
+             }
+            });
+        
+            $( "#color" ).selectmenu({
+                change: function( event, data ) {
+                    circle.css( "background", data.item.value );
+                }
+            });
+        } );
+        </script>
+        <script>
+        $( function() {
+            var circle = $( "#circle" );
+        
+            $( "#radius" ).selectmenu({
+            change: function( event, data ) {
+                circle.css({
+                width: data.item.value,
+                height: data.item.value
+                });
+            }
+            });
+        
+            $( "#color" ).selectmenu({
+            change: function( event, data ) {
+                circle.css( "background", data.item.value );
+            }
+            });
+        } );
+        </script>
+        <script>
+        $( function() {
+            function hexFromRGB(r, g, b) {
+            var hex = [
+                r.toString( 16 ),
+                g.toString( 16 ),
+                b.toString( 16 )
+            ];
+            $.each( hex, function( nr, val ) {
+                if ( val.length === 1 ) {
+                hex[ nr ] = "0" + val;
+                }
+            });
+            return hex.join( "" ).toUpperCase();
+            }
+            function refreshSwatch() {
+            var red = $( "#red" ).slider( "value" ),
+                green = $( "#green" ).slider( "value" ),
+                blue = $( "#blue" ).slider( "value" ),
+                hex = hexFromRGB( red, green, blue );
+            $( "#swatch" ).css( "background-color", "#" + hex );
+            }
+        
+            $( "#red, #green, #blue" ).slider({
+            orientation: "horizontal",
+            range: "min",
+            max: 255,
+            value: 127,
+            slide: refreshSwatch,
+            change: refreshSwatch
+            });
+            $( "#red" ).slider( "value", 255 );
+            $( "#green" ).slider( "value", 140 );
+            $( "#blue" ).slider( "value", 60 );
+        } );
+        </script>
+        <script>
+        $( function() {
+            var spinner = $( "#spinner" ).spinner();
+        
+            $( "#disable" ).on( "click", function() {
+                if ( spinner.spinner( "option", "disabled" ) ) {
+                    spinner.spinner( "enable" );
+                } else {
+                    spinner.spinner( "disable" );
+                }
+            });
+            $( "#destroy" ).on( "click", function() {
+                if ( spinner.spinner( "instance" ) ) {
+                    spinner.spinner( "destroy" );
+                } else {
+                    spinner.spinner();
+                }
+            });
+            $( "#getvalue" ).on( "click", function() {
+                alert( spinner.spinner( "value" ) );
+            });
+            $( "#setvalue" ).on( "click", function() {
+                spinner.spinner( "value", 5 );
+            });
+            
+            $( "button" ).button();
+        } );
+        </script>
+        <script>
+        $( function() {
+            $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+            $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+        } );
+        </script>
+        <script>
+        $( function() {
+            var tooltips = $( "[title]" ).tooltip({
+                position: {
+                    my: "left top",
+                    at: "right+5 top-5",
+                    collision: "none"
+                }
+            });
+            $( "<button>" )
+                .text( "Show help" )
+                .button()
+                .on( "click", function() {
+                    tooltips.tooltip( "open" );
+                })
+                .insertAfter( "form" );
+        }   );
+        </script>
+
 
     </body>
 </html>
